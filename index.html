@@ -175,7 +175,7 @@ td.num{font-variant-numeric:tabular-nums;text-align:center}
 <header style="display:flex;flex-direction:column;gap:12px">
   <span class="eyebrow">Nexos · Zoho CRM · propuesta para revisión</span>
   <h1>Cómo quedaría el flujo inmobiliario de Nexos en el CRM</h1>
-  <p class="lead">Este mapa explica en simple qué se va a montar en Zoho CRM a partir del documento N‑01 de Natalia (7 fases). Todavía no se ha creado nada: esto es lo que se propone, para que lo revises antes. Ya incluye las dos entregas de documentos (Parte 1 y Parte 2): haz clic en cualquier documento para leerlo.</p>
+  <p class="lead">Este mapa explica en simple qué se va a montar en Zoho CRM a partir del documento N‑01 de Nexos (7 fases). Todavía no se ha creado nada: esto es lo que se propone, para revisarlo antes de configurarlo. Ya incluye las dos entregas de documentos (Parte 1 y Parte 2): haz clic en cualquier documento para leerlo.</p>
   <div class="legend">
     <span><span class="tag t-new">Nuevo</span> se crea</span>
     <span><span class="tag t-keep">Ya existe</span> se mantiene</span>
@@ -440,14 +440,9 @@ td.num{font-variant-numeric:tabular-nums;text-align:center}
 
 <!-- 4 -->
 <section>
-  <div class="sec-head"><div class="sec-title"><span class="step">4</span><h2>Quién hace qué</h2></div></div>
-  <div class="who">
-    <div class="box"><h3>Lo monta Claude en el CRM</h3><ul>
-      <li>Los valores nuevos del campo Fase</li><li>El módulo Contratos y sus campos</li><li>Los 2 blueprints, primero en borrador</li>
-      <li>Las alertas por fecha y las tareas</li><li>Plantillas de correo a partir de estos documentos</li><li>Ajustar las plantillas de Zoho Sign</li></ul></div>
-    <div class="box"><h3>Lo revisas tú</h3><ul>
-      <li>Los nombres de las fases</li><li>Los blueprints en borrador, antes de activarlos</li><li>Mostrarlo a la dirección comercial de Nexos</li></ul></div>
-    <div class="box"><h3>Falta de Natalia / Nexos</h3><ul>
+  <div class="sec-head"><div class="sec-title"><span class="step">4</span><h2>Lo que nos falta</h2></div><p>Pendientes por parte de Nexos para completar el montaje.</p></div>
+  <div class="who" style="grid-template-columns:1fr">
+    <div class="box"><h3>Pendiente de Nexos</h3><ul>
       <li>Tabla de gravámenes del CTL (el sondeo la menciona pero no venía), carta de presentación, carta a la administración del edificio, instructivo de copropiedad</li><li>4 cartas de incremento de canon que llegaron vacías (3, 4, 7 y 8)</li>
       <li>Todos los documentos de la fase 7: carta de visita, acta de pre‑entrega, carta de acuerdos, acta de restitución, liquidación</li>
       <li>Limpiar plantillas con datos de casos reales: arrendamiento vivienda (correos y teléfonos), administración vivienda (un correo), acuerdo de brokers (nombres y contactos de terceros) y promesa con mera tenencia (valores y fechas de un negocio). En esta página ya están tapados.</li>
@@ -493,7 +488,7 @@ td.num{font-variant-numeric:tabular-nums;text-align:center}
     document.getElementById('m-title').textContent = d.title;
     document.getElementById('m-from').textContent = FOLDERS[d.folder] || d.folder;
     var p1 = d.part === 1;
-    document.getElementById('m-foot').textContent = 'Texto extraído del archivo ' + (d.title.indexOf('Excel') > -1 ? '.xlsx' : '.docx') + ' de la entrega ' + (p1 ? '"Parte 1" (Catalina Palacio)' : '"Parte 2" (Natalia Goyeneche)') + '. Los espacios en blanco (____) son los datos que el CRM llenará automáticamente.' + (p1 ? ' Los datos personales de casos reales que traía la plantilla aparecen tapados.' : '');
+    document.getElementById('m-foot').textContent = 'Texto extraído del archivo ' + (d.title.indexOf('Excel') > -1 ? '.xlsx' : '.docx') + ' de la entrega de Nexos ' + (p1 ? '"Parte 1"' : '"Parte 2"') + '. Los espacios en blanco (____) son los datos que el CRM llenará automáticamente.' + (p1 ? ' Los datos personales de casos reales que traía la plantilla aparecen tapados.' : '');
     var body = document.getElementById('m-body'); body.textContent = '';
     (d.blocks || []).forEach(function(b){
       if (b.t === 'p') { body.appendChild(el('p', b.b ? 'bold' : '', b.v)); }
