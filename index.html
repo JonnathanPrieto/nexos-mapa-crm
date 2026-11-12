@@ -1,8 +1,14 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mapa CRM Nexos</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
+[hidden]{display:none !important}
 /* Layout: columna de lectura de 960px; cada sección es un paso de la explicación, de lo general (piezas) a lo concreto (fases, alertas, decisiones). Los documentos son botones que abren una ventana con el texto. */
 :root{
   --bg:#f5f7fa; --surface:#ffffff; --surface-2:#eef2f7; --fg:#14213a; --muted:#56637a; --line:#d7dee8;
@@ -161,6 +167,8 @@ td.num{font-variant-numeric:tabular-nums;text-align:center}
 @media (max-width:520px){.sheet-body{padding:18px 16px 24px}}
 @media (prefers-reduced-motion:no-preference){.sheet{animation:up .18s ease-out}@keyframes up{from{transform:translateY(8px);opacity:.6}to{transform:none;opacity:1}}}
 </style>
+</head>
+<body>
 
 <div class="wrap">
 
@@ -568,3 +576,6 @@ td.num{font-variant-numeric:tabular-nums;text-align:center}
   window.addEventListener('scroll', hidePeek, {passive:true});
 })();
 </script>
+
+</body>
+</html>
